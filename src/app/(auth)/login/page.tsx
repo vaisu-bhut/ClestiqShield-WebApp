@@ -2,14 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import { api } from '@/services/api';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { ShieldCheck } from 'lucide-react';
 
 export default function LoginPage() {
-    const router = useRouter();
+    // const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ export default function LoginPage() {
                 // const currentUser = users.find((u: any) => u.email === email);
                 // if (currentUser) localStorage.setItem('user_id', currentUser.id);
 
-                router.push('/dashboard');
+                window.location.href = 'http://localhost:8010';
             } else {
                 setError("Invalid response from server");
             }
