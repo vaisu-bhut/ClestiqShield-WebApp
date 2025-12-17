@@ -1,19 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = '/api/proxy';
+const API_BASE_URL = 'http://localhost:8000/api/v1';
 
 class ApiService {
-    private getHeaders() {
-        const token = localStorage.getItem('auth_token');
-        const headers: Record<string, string> = {
-            'Content-Type': 'application/json',
-        };
-        if (token) {
-            headers['Authorization'] = `Bearer ${token}`;
-        }
-        return headers;
-    }
-
     private handleResponse(error: any) {
         if (error.response) {
             if (error.response.status === 401) {
@@ -48,66 +37,6 @@ class ApiService {
             const response = await axios.post(`${API_BASE_URL}/auth/register`, {
                 email,
                 password,
-            });
-            return response.data;
-        } catch (error) {
-            this.handleResponse(error);
-        }
-    }
-
-    async getUsers() {
-        try {
-            const response = await axios.get(`${API_BASE_URL}/users/`, {
-                headers: this.getHeaders(),
-            });
-            return response.data;
-        } catch (error) {
-            this.handleResponse(error);
-        }
-    }
-
-    async getApps() {
-        try {
-            const response = await axios.get(`${API_BASE_URL}/apps/`, {
-                headers: this.getHeaders(),
-            });
-            return response.data;
-        } catch (error) {
-            this.handleResponse(error);
-        }
-    }
-
-    async createApp(name: string, description: string) {
-        try {
-            const response = await axios.post(`${API_BASE_URL}/apps/`, {
-                name,
-                description,
-            }, {
-                headers: this.getHeaders(),
-            });
-            return response.data;
-        } catch (error) {
-            this.handleResponse(error);
-        }
-    }
-
-    async getAppKeys(appId: string | number) {
-        try {
-            const response = await axios.get(`${API_BASE_URL}/apps/${appId}/keys`, {
-                headers: this.getHeaders(),
-            });
-            return response.data;
-        } catch (error) {
-            this.handleResponse(error);
-        }
-    }
-
-    async createApiKey(appId: string | number, name: string) {
-        try {
-            const response = await axios.post(`${API_BASE_URL}/apps/${appId}/keys`, {
-                name,
-            }, {
-                headers: this.getHeaders(),
             });
             return response.data;
         } catch (error) {
