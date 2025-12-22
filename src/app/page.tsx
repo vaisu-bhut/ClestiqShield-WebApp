@@ -42,7 +42,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="http://localhost:3001/auth/signup"
+                href="https://platform.shield.clestiq.com/auth/signup"
                 className="px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-bold text-lg transition-all hover:scale-105 shadow-xl shadow-primary/20 hover:shadow-primary/40 ring-offset-2 focus:ring-2 ring-primary"
               >
                 Get Started Free

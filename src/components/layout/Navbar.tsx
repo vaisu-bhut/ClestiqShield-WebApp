@@ -46,13 +46,13 @@ export const Navbar = () => {
                         ))}
                         <div className="flex items-center space-x-4">
                             <a
-                                href="http://localhost:3001/auth/login"
+                                href="https://platform.shield.clestiq.com/auth/login"
                                 className="text-gray-600 dark:text-gray-300 hover:text-primary font-medium text-sm"
                             >
                                 Log in
                             </a>
                             <a
-                                href="http://localhost:3001/auth/signup"
+                                href="https://platform.shield.clestiq.com/auth/signup"
                                 className="bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-primary/25"
                             >
                                 Sign up
@@ -94,14 +94,14 @@ export const Navbar = () => {
                             ))}
                             <div className="pt-4 space-y-2">
                                 <a
-                                    href="http://localhost:3001/auth/login"
+                                    href="https://platform.shield.clestiq.com/auth/login"
                                     onClick={() => setIsOpen(false)}
                                     className="block w-full text-center py-2 text-gray-600 dark:text-gray-300 font-medium border border-gray-200 dark:border-white/10 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5"
                                 >
                                     Log in
                                 </a>
                                 <a
-                                    href="http://localhost:3001/auth/signup"
+                                    href="https://platform.shield.clestiq.com/auth/signup"
                                     onClick={() => setIsOpen(false)}
                                     className="block w-full text-center py-2 bg-primary text-white font-medium rounded-lg hover:bg-indigo-700"
                                 >
