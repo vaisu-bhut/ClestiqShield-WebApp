@@ -12,6 +12,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Clestiq Shield",
   description: "Secure your AI applications with Clestiq Shield",
+  icons: {
+    icon: "/assets/icon.png",
+    shortcut: "/assets/icon.png",
+    apple: "/assets/icon.png",
+  },
 };
 
 export default function RootLayout({

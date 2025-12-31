@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function NotFound() {
     return (
@@ -7,7 +7,7 @@ export default function NotFound() {
             <div className="text-center max-w-2xl">
                 <div className="mb-8 flex justify-center">
                     <div className="p-6 bg-primary/10 rounded-full">
-                        <ShieldCheck className="w-20 h-20 text-primary" />
+                        <Image src="/assets/icon.png" alt="Clestiq Shield" width={80} height={80} className="w-20 h-20 rounded-xl object-cover" />
                     </div>
                 </div>
 
