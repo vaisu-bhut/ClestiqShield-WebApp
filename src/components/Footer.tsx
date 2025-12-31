@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck, Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
 
 export function Footer() {
@@ -9,8 +10,8 @@ export function Footer() {
                     {/* Brand */}
                     <div className="col-span-1">
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                                <ShieldCheck className="w-5 h-5 text-primary" />
+                            <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center overflow-hidden">
+                                <Image src="/assets/icon.png" alt="Clestiq Shield Logo" width={32} height={32} className="w-full h-full object-cover" />
                             </div>
                             <span className="font-bold text-xl">Clestiq Shield</span>
                         </div>

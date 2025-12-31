@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ShieldCheck, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -26,7 +27,7 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <Link href="/" className="flex items-center space-x-2">
-                        <ShieldCheck className="h-8 w-8 text-primary" />
+                        <Image src="/assets/icon.png" alt="Clestiq Shield Logo" width={32} height={32} className="w-8 h-8 rounded-lg" />
                         <span className="text-xl font-bold text-gray-900 dark:text-white">
                             Clestiq Shield
                         </span>
