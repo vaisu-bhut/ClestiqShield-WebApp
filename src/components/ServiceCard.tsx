@@ -24,8 +24,8 @@ export function ServiceCard({ title, description, icon: Icon, features, delay = 
                 </div>
                 <h3 className="text-xl font-bold">{title}</h3>
             </div>
-            <p className="text-muted-foreground mb-6 flex-grow">{description}</p>
-            <ul className="space-y-2 mt-auto">
+            <p className="text-muted-foreground mb-6 min-h-[3.75rem]">{description}</p>
+            <ul className="space-y-2">
                 {features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
